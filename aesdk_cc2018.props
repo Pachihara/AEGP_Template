@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <AESDK_TOP>D:\work\tools\ae_plugins\aesdk\Adobe After Effects CC 15.0 Win SDK</AESDK_TOP>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetExt>.aex</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;MSWindows;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(AESDK_TOP)\Examples\Headers;$(AESDK_TOP)\Examples\Headers\SP;$(AESDK_TOP)\Examples\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="AESDK_TOP">
+      <Value>$(AESDK_TOP)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
